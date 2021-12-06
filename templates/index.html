@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Prediction System</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <center>
+            <form action="{{ url_for('predict')}}" method="post" >
+                <br>
+                <h2 style="color: black">Enter Required Data ->>></h2>
+                <br>
+                <br>
+                <input class="input border" type="text" name="Song_Id" placeholder="Song_Id" required="required" />
+                <br>
+                <br>
+                <select name="Artist_Name" id="Artist_Name" class="form-control rounded-pill">
+                    <option value="Wiz Khalifa">Wiz Khalifa</option>
+                    <option value="Adele">Adele</option>
+                    <option value="OneRepublic">OneRepublic</option>
+                    <option value="Katy Perry">Katy Perry</option>
+                    <option value="Rihanna and Calvin Harris">Rihanna and Calvin Harris</option>
+                    <option value="Avicii">Avicii</option>
+                    <option value="Rihanna">Rihanna</option>
+                    <option value="Lady Gaga">Lady Gaga</option>
+                    <option value="Lucy Dacus">Lucy Dacus</option>
+                    <option value="Travis Barker">Travis Barker</option>
+                  </select>
+                <br>
+                <br>
+                <input class="input border" type="text" name="Year" placeholder="Year" required="required" />
+                <br>
+                <br>
+                <br>
+                
+                <!-- Show button -->
+                
+                <div class="btn">
+                <input type="submit">
+                </div>
+                
+            </form>
+            </center>
+            <br>
+            <br>
+           <!-- Show predicted output using ML model --> 
+           <div>
+            <center>
+              <h2 style="color: black">{{ prediction_text }}</h2>
+            </center>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
